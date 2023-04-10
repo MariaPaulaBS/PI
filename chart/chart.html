@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chart</title>
+    <link rel="shortcut icon" href="img/grafico-preditivo.png" type="image/x-icon">
+    <link rel="stylesheet" href="sytle.css">
 </head>
-<body style="display: flex; justify-content: center;justify-content: space-around;">
+<body  >
+<div class="titulo"><h1>CHARTS</h1></div>
 
+
+<div class="div1">
 <div>
-  <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+  <canvas id="myChart" ></canvas>
 </div>
 <div>
-    <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+    <canvas id="myChart2"></canvas>
   </div>
+</div>
+
+<div class="footer">
+    <div class="copyright">
+                  Copyright © Charts | Todos os direitos reservados.
+                </div>           
+</div> 
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+  Chart.defaults.font.weight = 'bold';
+  Chart.defaults.color = '#000';
+  Chart.defaults.font.family = 'Times New Roman';
+  Chart.defaults.font.size = 16;
+ 
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
@@ -26,11 +43,12 @@
     data: {
       labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
       datasets: [{
-        label: 'Temperatura',
-        borderColor: '#c9143c',
-        backgroundColor: '#c9143c',
+        label: ' Temperatura',
+        borderColor: '#3b2931e1',
+        backgroundColor: '#3b2931e1',
         data: [30, 29, 28, 25, 22, 23],
-        borderWidth: 3
+        borderWidth: 3,
+    
       },
       {
         label: 'Umidade',
@@ -58,8 +76,8 @@ new Chart(ctx2, {
     datasets: [
     {
         label: 'Temperatura Média',
-        borderColor: '#c9143c',
-        backgroundColor: '#c9143c',
+        borderColor: '#3b2931e1',
+        backgroundColor: '#3b2931e1',
         data: [22, 24, 27, 23, 20, 18],
         borderWidth: 1
       }, 
